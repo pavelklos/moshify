@@ -6,6 +6,10 @@
   --color-accent: #ff3400;
   --color-headings: #1b0760;
   --color-body: #918ca4;
+  /* ADDED */
+  --color-body-light: rgba(145, 140, 164, 0.25); /* RGBA FROM #918ca4 */
+  --border-body: 1px solid var(--color-body-light);
+  --color-icon-background: #f3f9fa;
 }
 
 /* Typography *****************************************************************/
@@ -102,7 +106,7 @@ a {
   padding: 0.5rem 2rem;
   white-space: nowrap;
   /* ADDED */
-  border: 1px solid var(--color-body);
+  border: var(--border-body);
 }
 
 .badge--primary {
@@ -156,4 +160,36 @@ a {
   .list--tick .list__item {
     padding-left: 0;
   }
+}
+
+/* Icons **********************************************************************/
+
+.icon {
+  width: 40px;
+  height: 40px;
+}
+
+.icon--primary {
+  fill: var(--color-primary);
+}
+/* ADDED */
+.icon--secondary {
+  fill: var(--color-secondary);
+}
+/* ADDED */
+.icon--accent {
+  fill: var(--color-accent);
+}
+
+.icon-container {
+  /* background: #f3f9fa; */
+  background: var(--color-icon-background);
+  width: 64px;
+  height: 64px;
+  border-radius: 100%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  /* ADDED */
+  border: var(--border-body);
 }
