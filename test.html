@@ -114,7 +114,7 @@
 
     <!-- Lists -->
     <section>
-      <h2>Lists</h2>
+      <h2>Lists (.list)</h2>
       <div>
         <ul class="list">
           <li class="list__item">Item 1</li>
@@ -225,7 +225,7 @@
 
     <!-- Cards -->
     <section>
-      <h2>Cards</h2>
+      <h2>Cards (.card)</h2>
       <div>
         <div style="width: 400px; padding: 4rem; border: 1px solid #ccc">
           <div class="card card--primary">
@@ -251,7 +251,7 @@
     <!-- Plans -->
     <!-- Popular Badge -->
     <section>
-      <h2>Plans</h2>
+      <h2>Plans (.plan + .card + .list)</h2>
       <div>
         <div class="plan plan--popular">
           <div class="card card--secondary">
@@ -278,7 +278,7 @@
 
     <!-- Media Objects -->
     <section>
-      <h2>Media Objects</h2>
+      <h2>Media Objects (.media)</h2>
       <div>
         <div class="media">
           <div class="media__image">
@@ -295,6 +295,33 @@
             </p>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- Quotes -->
+    <section>
+      <h2>Quotes (.quote + .media)</h2>
+      <div>
+        <blockquote class="quote">
+          <p class="quote__text">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt
+            optio officiis dolore earum error eaque perferendis laudantium sed
+            praesentium dolorum.
+          </p>
+          <footer>
+            <div class="media">
+              <div class="media__image">
+                <svg class="icon icon--primary quote__line">
+                  <use xlink:href="images/sprite.svg#line"></use>
+                </svg>
+              </div>
+              <div class="media__body">
+                <h3 class="media__title quote__author">John Smith</h3>
+                <p class="quote__organization">ABC Company</p>
+              </div>
+            </div>
+          </footer>
+        </blockquote>
       </div>
     </section>
   </body>
