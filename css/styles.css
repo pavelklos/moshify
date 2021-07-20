@@ -10,7 +10,9 @@
   /* ADDED */
   --color-body-light: rgba(145, 140, 164, 0.25); /* RGBA FROM #918ca4 */
   --border-body: 1px solid var(--color-body-light);
-  --border: 1px solid #ccc;
+  --color-border: #ccc;
+  --border: 1px solid var(--color-border);
+  --border-radius: 30px;
   --color-icon-background: #f3f9fa;
   --color-primary-hover: #3a8ffd;
   --color-secondary-hover: #05cdf0;
@@ -268,10 +270,11 @@ a {
 }
 
 /* Inputs *********************************************************************/
+/* Input Groups ***************************************************************/
 
 .input {
-  border-radius: 30px;
-  border: var(--border);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--color-border);
   color: var(--color-headings);
   font-size: 2rem;
   outline: 0;
@@ -280,6 +283,23 @@ a {
 
 ::placeholder {
   color: var(--color-placeholder);
+}
+
+.input-group {
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  display: flex;
+}
+
+.input-group .input {
+  border: 0;
+  flex-grow: 1;
+  padding: 1.5rem 3.5rem; /* PADDING FROM .input */
+  padding: 1.5rem 1rem;
+}
+
+.input-group .btn {
+  margin: 4px;
 }
 
 @media screen and (min-width: 1024px) {
