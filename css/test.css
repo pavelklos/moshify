@@ -102,12 +102,15 @@ h6 {
 
 /* Grids **********************************************************************/
 
+/* Testimonials ***************************************************************/
+
 .list,
 .card,
 .plan,
 .media,
 .quote,
-.grid {
+.grid,
+.testimonial {
   margin: 0.5rem;
   /* border: 5px solid rgba(220, 20, 60, 0.5); */
   border: 5px solid rgba(0, 128, 0, 0.5);

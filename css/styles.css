@@ -20,6 +20,7 @@
   --color-secondary-hover: #05cdf0;
   --color-accent-hover: #ec3000;
   --color-button: #fff;
+  --color-white: #fff;
   --color-card-header: #fff;
   --color-plan: #fff;
   --color-placeholder: #cdcbd7;
@@ -42,7 +43,7 @@ html {
 
 body {
   font-family: Inter, Arial, Helvetica, sans-serif;
-  font-size: 2.4rem;
+  font-size: 2.9rem;
   line-height: 1.5;
   color: var(--color-body);
 }
@@ -126,7 +127,7 @@ a {
   padding: 0.5rem 2rem;
   white-space: nowrap;
   /* ADDED */
-  border: var(--border-body);
+  border: var(--border-body); /* ADDED */
 }
 
 .badge--primary {
@@ -189,8 +190,16 @@ a {
   height: 40px;
 }
 
+.icon--small {
+  width: 30px;
+  height: 30px;
+}
+
 .icon--primary {
   fill: var(--color-primary);
+}
+.icon--white {
+  fill: var(--color-white);
 }
 /* ADDED */
 .icon--secondary {
@@ -211,7 +220,11 @@ a {
   justify-content: center;
   align-items: center;
   /* ADDED */
-  border: var(--border-body);
+  border: var(--border-body); /* ADDED */
+}
+
+.icon-container--accent {
+  background: var(--color-accent);
 }
 
 /* Buttons ********************************************************************/
@@ -482,5 +495,43 @@ a {
 @media screen and (min-width: 1024px) {
   .grid--1x3 {
     grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Testimonials ***************************************************************/
+
+.testimonial {
+  padding: 3rem;
+  border: var(--border-body); /* ADDED */
+}
+
+.testimonial__image {
+  position: relative;
+  margin: 0 3rem;
+}
+
+.testimonial__image > img {
+  width: 100%;
+}
+
+.testimonial__image > .icon-container {
+  position: absolute;
+  top: 3rem;
+  right: -32px;
+}
+
+@media screen and (min-width: 768px) {
+  .testimonial__image {
+    margin: 0;
+  }
+
+  .testimonial .quote,
+  .testimonial .quote__author {
+    font-size: 2.4rem;
+  }
+
+  .testimonial .quote {
+    margin-left: 6rem;
+    margin-right: 0;
   }
 }
