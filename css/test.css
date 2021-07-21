@@ -108,6 +108,8 @@ h6 {
 
 /* Collapsibles ***************************************************************/
 
+/* Blocks *********************************************************************/
+
 .list,
 .card,
 .plan,
@@ -116,7 +118,8 @@ h6 {
 .grid,
 .testimonial,
 .callout,
-.collapsible {
+.collapsible,
+.block {
   margin: 0.5rem;
   /* border: 5px solid rgba(220, 20, 60, 0.5); */
   border: 5px solid rgba(0, 128, 0, 0.5);
