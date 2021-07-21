@@ -19,10 +19,7 @@
   --color-primary-hover: #3a8ffd;
   --color-secondary-hover: #05cdf0;
   --color-accent-hover: #ec3000;
-  --color-button: #fff;
   --color-white: #fff;
-  --color-card-header: #fff;
-  --color-plan: #fff;
   --color-placeholder: #cdcbd7;
   --box-shadow: 0 0 20px 10px #f3f3f3;
 }
@@ -244,7 +241,7 @@ a {
 
 .btn--primary {
   background: var(--color-primary);
-  color: var(--color-button);
+  color: var(--color-white);
 }
 .btn--primary:hover {
   background: var(--color-primary-hover);
@@ -252,7 +249,7 @@ a {
 
 .btn--secondary {
   background: var(--color-secondary);
-  color: var(--color-button);
+  color: var(--color-white);
 }
 .btn--secondary:hover {
   background: var(--color-secondary-hover);
@@ -260,20 +257,25 @@ a {
 
 .btn--accent {
   background: var(--color-accent);
-  color: var(--color-button);
+  color: var(--color-white);
 }
 .btn--accent:hover {
   background: var(--color-accent-hover);
 }
 
 .btn--outline {
-  background: var(--color-button);
+  background: var(--color-white);
   color: var(--color-headings);
   border: 2px solid var(--color-headings);
 }
 .btn--outline:hover {
   background: var(--color-headings);
-  color: var(--color-button);
+  color: var(--color-white);
+}
+
+.btn--stretched {
+  padding-left: 6rem;
+  padding-right: 6rem;
 }
 
 .btn--block {
@@ -341,19 +343,19 @@ a {
 
 .card--primary .card__header {
   background: var(--color-primary);
-  color: var(--color-card-header);
+  color: var(--color-white);
 }
 
 .card--secondary .card__header {
   background: var(--color-secondary);
-  color: var(--color-card-header);
+  color: var(--color-white);
 }
 
 /* Plans **********************************************************************/
 /* Popular Badge **************************************************************/
 
 .plan__name {
-  color: var(--color-plan);
+  color: var(--color-white);
   margin: 0;
   font-weight: 500;
   font-size: 2.4rem;
@@ -533,5 +535,47 @@ a {
   .testimonial .quote {
     margin-left: 6rem;
     margin-right: 0;
+  }
+}
+
+/* Callouts *******************************************************************/
+
+.callout {
+  padding: 4rem;
+  border-radius: 5px;
+}
+
+.callout--primary {
+  background: var(--color-primary);
+  color: var(--color-white);
+}
+
+.callout__heading {
+  color: var(--color-white);
+  margin-top: 0;
+  font-size: 3rem;
+}
+
+.callout .btn {
+  justify-self: center;
+  align-self: center;
+}
+
+.callout__content {
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .callout .grid--1x2 {
+    grid-template-columns: 1fr auto;
+  }
+
+  .callout__content {
+    text-align: left;
+  }
+
+  .callout .btn {
+    justify-self: start;
+    margin: 0 2rem;
   }
 }
