@@ -15,5 +15,14 @@
     "titleBar.inactiveBackground": "#ffffff99",
     "titleBar.inactiveForeground": "#15202b99"
   },
-  "peacock.color": "white"
+  "peacock.color": "white",
+  // [Prettier not formatting HTML files in VS Code]
+  // https://stackoverflow.com/questions/57907645/prettier-not-formatting-html-files-in-vs-code
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  "editor.formatOnType": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  }
 }
