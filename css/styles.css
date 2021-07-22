@@ -33,6 +33,11 @@
 
 /* Typography *****************************************************************/
 
+::selection {
+  background: var(--color-primary);
+  color: var(--color-white);
+}
+
 html {
   /* DEFAULT = 16px */
   /* 62.5% of 16px = 10px */
@@ -64,6 +69,7 @@ h2 {
 
 h3 {
   font-size: 3rem;
+  font-weight: 500;
 }
 
 p {
@@ -160,7 +166,7 @@ a {
 .list {
   list-style: none;
   padding-left: 0;
-  color: var(--color-headings);
+  /* color: var(--color-headings); */
 }
 
 .list--inline .list__item {
@@ -171,6 +177,7 @@ a {
 .list--tick {
   list-style-image: url(../images/tick.svg);
   padding-left: 3rem;
+  color: var(--color-headings);
 }
 
 .list--tick .list__item {
@@ -463,6 +470,7 @@ a {
 
 .media {
   display: flex;
+  margin-bottom: 4rem;
 }
 
 .media__title {
@@ -668,6 +676,7 @@ a {
 
 .block__header {
   text-align: center;
+  margin-bottom: 4rem;
 }
 
 .block__heading {
@@ -679,18 +688,23 @@ a {
   color: #7b858b;
 }
 
-.block--dark .block__heading {
+/* .block--dark .block__heading {
+  color: #fff;
+} */
+.block--dark h1,
+.block--dark h2,
+.block--dark h3 {
   color: #fff;
 }
 
 .block--skewed-right {
   padding-bottom: calc(var(--padding-vertical) + 4rem);
-  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 80%);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 90%);
 }
 
 .block--skewed-left {
   padding-bottom: calc(var(--padding-vertical) + 4rem);
-  clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 0% 100%);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);
 }
 
 /* FOR <body> OR OTHER WRAPPER <div> */
@@ -765,11 +779,6 @@ a {
 }
 
 /* Hero ***********************************************************************/
-
-.hero {
-  /* OVERWRITE '.block--skewed-left' */
-  clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);
-}
 
 .hero__tagline {
   font-size: 2rem;
@@ -857,9 +866,32 @@ a {
   }
 }
 
+/* Showcase Block *************************************************************/
+
+.block-showcase__image > img {
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .block-showcase .grid {
+    grid-template-columns: 50% 50%;
+  }
+
+  .block-showcase__image {
+    justify-self: end;
+  }
+
+  .block-showcase__image > img {
+    width: auto;
+    max-width: 700px;
+  }
+}
+
 /* TEST ***********************************************************************/
 /* TODO: HIDE */
-.container,
+.container {
+  border: 4px dashed var(--color-primary);
+}
 .feature {
-  border: 2px dashed orange;
+  border: 2px dashed var(--color-primary);
 }
