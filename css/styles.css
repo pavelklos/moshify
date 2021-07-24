@@ -1,5 +1,6 @@
-/* Color Palette **************************************************************/
+@import "./normalize.css";
 
+/* Color Palette **************************************************************/
 :root {
   /* COLOR (NORMAL - HOVER) */
   --color-primary: #2584ff; /* #3a8ffd */
